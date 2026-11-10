@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Create and Append Element Example</title>
+</head>
+<body>
+    <div id="container">
+        <h2>Original Heading</h2>
+    </div>
+
+    <script>
+
+        const container= document.getElementById("container");
+
+        const newParagraph = document.createElement("p");
+
+        newParagraph.textContent = "This is text created and added via JavaScript in memory";
+
+        container.appendChild(newParagraph);
+
+    </script>
+</body>
+</html>

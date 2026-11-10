@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Form Submission</title>
+</head>
+<body>
+    <form id = "signupForm">
+    <input type="text" id="name" placeholedr="Enter your name" required />
+    <button type="submit">Submit</button>
+    </form>
+    <p id="welcome">Initia Welcome Message</p>
+
+    <script>
+        const form = document.getElementById("signupForm");
+        const input = document.getElementById("name");
+        const welcome = document.getElementById("welcome");
+
+        form.addEventListener("submit", function (e) {
+            e.preventDefault();
+            welcome.textContent=`Welcome, ${input.value}!`;
+        });
+
+        input.addEventListener("input", function() {
+            console.log("Typing:", input.value);
+        });
+    </script>
+</body>
+
+</html>
